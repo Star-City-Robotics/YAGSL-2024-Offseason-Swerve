@@ -1,5 +1,0 @@
-<map id="frc.robot.subsystems.swervedrive.SwerveSubsystem.simDriveCommand" name="frc.robot.subsystems.swervedrive.SwerveSubsystem.simDriveCommand">
-<area shape="rect" id="Node000001" title="Command to drive the robot using translative values and heading as a setpoint." alt="" coords="5,5,277,45"/>
-<area shape="rect" id="Node000002" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a2e0f0e818216144d1320209209f9ff13" title="Drive the robot given a chassis field oriented velocity." alt="" coords="325,5,592,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,23,312,23,312,28,277,28"/>
-</map>

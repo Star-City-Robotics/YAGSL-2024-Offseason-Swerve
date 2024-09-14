@@ -1,7 +1,0 @@
-<map id="frc.robot.Robot.teleopInit" name="frc.robot.Robot.teleopInit">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,191,70"/>
-<area shape="rect" id="Node000002" href="$d1/dca/classfrc_1_1robot_1_1RobotContainer.html#aacf33cedb32e373ae7862ad229f8cf4c" title=" " alt="" coords="239,5,444,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,43,225,38,226,43,191,48"/>
-<area shape="rect" id="Node000003" href="$d1/dca/classfrc_1_1robot_1_1RobotContainer.html#a2b9448f7f32706f581f5c12f9219654e" title=" " alt="" coords="239,69,444,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,67,226,71,225,77,191,72"/>
-</map>

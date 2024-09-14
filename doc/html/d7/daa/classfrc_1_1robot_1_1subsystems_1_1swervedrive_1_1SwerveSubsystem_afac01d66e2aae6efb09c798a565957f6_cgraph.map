@@ -1,9 +1,0 @@
-<map id="frc.robot.subsystems.swervedrive.SwerveSubsystem.zeroGyroWithAlliance" name="frc.robot.subsystems.swervedrive.SwerveSubsystem.zeroGyroWithAlliance">
-<area shape="rect" id="Node000001" title="This will zero (calibrate) the robot to assume the current position is facing forward." alt="" coords="5,69,292,109"/>
-<area shape="rect" id="Node000002" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#ac34f8457961698b68497c5f187819e36" title="Gets the current pose (position and rotation) of the robot, as reported by odometry." alt="" coords="340,5,587,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,67,351,45,352,51,248,72"/>
-<area shape="rect" id="Node000003" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a688eef9cc03e2ced51ed92c2dd5c92bf" title="Resets odometry to the given pose." alt="" coords="340,69,587,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="292,87,326,87,326,92,292,92"/>
-<area shape="rect" id="Node000004" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a7780bc3dc1fdf30313bc3f1ba47a5799" title="Resets the gyro angle to zero and resets odometry to the same position, but facing toward 0." alt="" coords="340,133,587,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="248,107,352,128,351,133,247,112"/>
-</map>

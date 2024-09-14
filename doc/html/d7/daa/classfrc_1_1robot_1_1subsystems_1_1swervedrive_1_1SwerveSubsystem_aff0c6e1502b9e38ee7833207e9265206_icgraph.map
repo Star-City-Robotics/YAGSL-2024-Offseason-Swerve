@@ -1,5 +1,0 @@
-<map id="frc.robot.subsystems.swervedrive.SwerveSubsystem.drive" name="frc.robot.subsystems.swervedrive.SwerveSubsystem.drive">
-<area shape="rect" id="Node000001" title="The primary method for controlling the drivebase." alt="" coords="300,5,547,45"/>
-<area shape="rect" id="Node000002" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a0a27c5621221d7f24f8bd66dc8e70866" title="Aim the robot at the speaker." alt="" coords="5,5,252,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,28,252,28,252,23,286,23"/>
-</map>
