@@ -1,0 +1,5 @@
+<map id="frc.robot.Robot.disabledInit" name="frc.robot.Robot.disabledInit">
+<area shape="rect" id="Node000001" title="This function is called once each time the robot enters Disabled mode." alt="" coords="5,13,204,38"/>
+<area shape="rect" id="Node000002" href="$d1/dca/classfrc_1_1robot_1_1RobotContainer.html#a2b9448f7f32706f581f5c12f9219654e" title=" " alt="" coords="252,5,457,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+</map>

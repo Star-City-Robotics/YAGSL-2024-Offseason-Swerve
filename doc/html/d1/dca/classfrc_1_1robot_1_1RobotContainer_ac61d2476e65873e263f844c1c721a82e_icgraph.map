@@ -1,0 +1,5 @@
+<map id="frc.robot.RobotContainer.getAutonomousCommand" name="frc.robot.RobotContainer.getAutonomousCommand">
+<area shape="rect" id="Node000001" title="Use this to pass the autonomous command to the main Robot class." alt="" coords="279,5,485,45"/>
+<area shape="rect" id="Node000002" href="$d2/d70/classfrc_1_1robot_1_1Robot.html#a5b1c022cd3e2b9f6e5dde62571839173" title="This autonomous runs the autonomous command selected by your RobotContainer class." alt="" coords="5,13,231,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,28,231,28,231,23,265,23"/>
+</map>

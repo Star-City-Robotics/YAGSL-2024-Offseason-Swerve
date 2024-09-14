@@ -1,0 +1,7 @@
+<map id="frc.robot.subsystems.swervedrive.SwerveSubsystem.getTargetSpeeds" name="frc.robot.subsystems.swervedrive.SwerveSubsystem.getTargetSpeeds">
+<area shape="rect" id="Node000001" title="Get the chassis speeds based on controller input of 1 joystick and one angle." alt="" coords="5,5,260,45"/>
+<area shape="rect" id="Node000002" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a4fdb5951e10e1cdc53a5cfaa938334c8" title="Gets the current yaw angle of the robot, as reported by the swerve pose estimator in the underlying d..." alt="" coords="308,5,555,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,23,294,23,294,28,260,28"/>
+<area shape="rect" id="Node000003" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#ac34f8457961698b68497c5f187819e36" title="Gets the current pose (position and rotation) of the robot, as reported by odometry." alt="" coords="603,5,849,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="555,23,589,23,589,28,555,28"/>
+</map>

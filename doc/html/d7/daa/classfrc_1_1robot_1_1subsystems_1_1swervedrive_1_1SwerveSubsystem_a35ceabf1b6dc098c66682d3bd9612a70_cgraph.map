@@ -1,0 +1,12 @@
+<map id="frc.robot.subsystems.swervedrive.SwerveSubsystem.setupPhotonVision" name="frc.robot.subsystems.swervedrive.SwerveSubsystem.setupPhotonVision">
+<area shape="rect" id="Node000001" title="Setup the photon vision class." alt="" coords="5,35,272,75"/>
+<area shape="rect" id="Node000002" href="$de/dae/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1Vision.html#a908bc3ff2b9c8c780cc5e067b31216a6" title="Update the pose estimation inside of SwerveDrive with all of the given poses." alt="" coords="320,35,567,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,52,306,52,306,57,272,57"/>
+<area shape="rect" id="Node000003" href="$de/dae/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1Vision.html#a02f97341b65dbe7b497cd88bf2a16e13" title="Generates the estimated robot pose." alt="" coords="909,5,1156,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="567,46,895,29,896,35,567,51"/>
+<area shape="rect" id="Node000004" href="$de/dae/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1Vision.html#aa2424a2a6f0b2d588f448b81ef20ce71" title="The standard deviations of the estimated pose from Vision#getEstimatedGlobalPose(Cameras),..." alt="" coords="615,63,861,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="567,64,601,67,601,72,567,69"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="841,60,916,45,917,51,842,65"/>
+<area shape="rect" id="Node000005" href="$de/dae/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1Vision.html#ab56837d7ee38ee4c1f23664472698910" title="Get the latest result from a given Camera." alt="" coords="909,69,1156,109"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="862,83,896,84,896,89,861,88"/>
+</map>

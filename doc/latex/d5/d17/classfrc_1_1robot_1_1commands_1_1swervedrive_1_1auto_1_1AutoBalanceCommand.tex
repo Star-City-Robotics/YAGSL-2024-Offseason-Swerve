@@ -1,0 +1,112 @@
+\doxysection{frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command Class Reference}
+\hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand}{}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand}\index{frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}}
+
+
+Auto Balance command using a simple PID controller.  
+
+
+
+
+Inheritance diagram for frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d4/dbe/classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d7/d9b/classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a2961866375e111a30bc99a155af53612}{Auto\+Balance\+Command}} (Swerve\+Subsystem swerve\+Subsystem)
+\item 
+void \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a893e90b1135d087b6d306f20e8aa49c0}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em The initial subroutine of a command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a4ecdde159466352d75ea0f329d6ba089}{execute}} ()
+\begin{DoxyCompactList}\small\item\em The main body of a command. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a932ad627d5bc0d28e08b96523481c6bc}{is\+Finished}} ()
+\item 
+void \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_ad75fbb3d1ebb1745be059bedd91e4b6a}{end}} (boolean interrupted)
+\begin{DoxyCompactList}\small\item\em The action to take when the command ends. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Auto Balance command using a simple PID controller. 
+
+Created by Team 3512 \href{https://github.com/frc3512/Robot-2023/blob/main/src/main/java/frc3512/robot/commands/AutoBalance.java}{\texttt{ ...}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a2961866375e111a30bc99a155af53612}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a2961866375e111a30bc99a155af53612} 
+\index{frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}!AutoBalanceCommand@{AutoBalanceCommand}}
+\index{AutoBalanceCommand@{AutoBalanceCommand}!frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}}
+\doxysubsubsection{\texorpdfstring{AutoBalanceCommand()}{AutoBalanceCommand()}}
+{\footnotesize\ttfamily frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command.\+Auto\+Balance\+Command (\begin{DoxyParamCaption}\item[{Swerve\+Subsystem}]{swerve\+Subsystem }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_ad75fbb3d1ebb1745be059bedd91e4b6a}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_ad75fbb3d1ebb1745be059bedd91e4b6a} 
+\index{frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}!end@{end}}
+\index{end@{end}!frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command.\+end (\begin{DoxyParamCaption}\item[{boolean}]{interrupted }\end{DoxyParamCaption})}
+
+
+
+The action to take when the command ends. 
+
+Called when either the command finishes normally -- that is it is called when {\ttfamily \doxylink{}{is\+Finished()}} returns true -- or when it is interrupted/canceled. This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interrupted} & whether the command was interrupted/canceled \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a4ecdde159466352d75ea0f329d6ba089}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a4ecdde159466352d75ea0f329d6ba089} 
+\index{frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}!execute@{execute}}
+\index{execute@{execute}!frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command.\+execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main body of a command. 
+
+Called repeatedly while the command is scheduled. (That is, it is called repeatedly until {\ttfamily \doxylink{}{is\+Finished()}}) returns true.) \Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a893e90b1135d087b6d306f20e8aa49c0}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a893e90b1135d087b6d306f20e8aa49c0} 
+\index{frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}!initialize@{initialize}}
+\index{initialize@{initialize}!frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command.\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The initial subroutine of a command. 
+
+Called once when the command is initially scheduled. \Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a932ad627d5bc0d28e08b96523481c6bc}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1auto_1_1AutoBalanceCommand_a932ad627d5bc0d28e08b96523481c6bc} 
+\index{frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!frc.robot.commands.swervedrive.auto.AutoBalanceCommand@{frc.robot.commands.swervedrive.auto.AutoBalanceCommand}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily boolean frc.\+robot.\+commands.\+swervedrive.\+auto.\+Auto\+Balance\+Command.\+is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether this command has finished. Once a command finishes -- indicated by this method returning true -- the scheduler will call its {\ttfamily \doxylink{}{end(boolean)}} method. 
+
+Returning false will result in the command never ending automatically. It may still be cancelled manually or interrupted by another command. Hard coding this command to always return true will result in the command executing once and finishing immediately. It is recommended to use \texorpdfstring{$\ast$}{*} {\ttfamily \doxylink{}{Instant\+Command}} for such an operation. 
+
+\begin{DoxyReturn}{Returns}
+whether this command has finished. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/steven/\+Git\+Hub/\+SCAROB/\+Swerve\+Drive-\/2024/src/main/java/frc/robot/commands/swervedrive/auto/\mbox{\hyperlink{AutoBalanceCommand_8java}{Auto\+Balance\+Command.\+java}}\end{DoxyCompactItemize}

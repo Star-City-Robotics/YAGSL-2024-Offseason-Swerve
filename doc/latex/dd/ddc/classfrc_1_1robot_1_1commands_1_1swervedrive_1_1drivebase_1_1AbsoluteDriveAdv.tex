@@ -1,0 +1,109 @@
+\doxysection{frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv Class Reference}
+\hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv}{}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv}\index{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}}
+
+
+A more advanced Swerve Control System that has 4 buttons for which direction to face.  
+
+
+
+
+Inheritance diagram for frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{dd/dce/classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{d6/d28/classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_ac0460acf6ef3a22ecad5c9bb4f5900fb}{Absolute\+Drive\+Adv}} (Swerve\+Subsystem swerve, Double\+Supplier vX, Double\+Supplier vY, Double\+Supplier heading\+Adjust, Boolean\+Supplier look\+Away, Boolean\+Supplier look\+Towards, Boolean\+Supplier look\+Left, Boolean\+Supplier look\+Right)
+\begin{DoxyCompactList}\small\item\em Used to drive a swerve robot in full field-\/centric mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a8c39f3fe0fb603fa6ac2fbb82e6c74de}{initialize}} ()
+\item 
+void \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a72345897f5310a145f730eca5610bf5b}{execute}} ()
+\item 
+void \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a9e6b57f4bd63a344312653e7874720e7}{end}} (boolean interrupted)
+\item 
+boolean \mbox{\hyperlink{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_ab672a6ee286dff447b08d0a9ce84955b}{is\+Finished}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A more advanced Swerve Control System that has 4 buttons for which direction to face. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_ac0460acf6ef3a22ecad5c9bb4f5900fb}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_ac0460acf6ef3a22ecad5c9bb4f5900fb} 
+\index{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}!AbsoluteDriveAdv@{AbsoluteDriveAdv}}
+\index{AbsoluteDriveAdv@{AbsoluteDriveAdv}!frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}}
+\doxysubsubsection{\texorpdfstring{AbsoluteDriveAdv()}{AbsoluteDriveAdv()}}
+{\footnotesize\ttfamily frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv.\+Absolute\+Drive\+Adv (\begin{DoxyParamCaption}\item[{Swerve\+Subsystem}]{swerve,  }\item[{Double\+Supplier}]{vX,  }\item[{Double\+Supplier}]{vY,  }\item[{Double\+Supplier}]{heading\+Adjust,  }\item[{Boolean\+Supplier}]{look\+Away,  }\item[{Boolean\+Supplier}]{look\+Towards,  }\item[{Boolean\+Supplier}]{look\+Left,  }\item[{Boolean\+Supplier}]{look\+Right }\end{DoxyParamCaption})}
+
+
+
+Used to drive a swerve robot in full field-\/centric mode. 
+
+vX and vY supply translation inputs, where x is torwards/away from alliance wall and y is left/right. Heading Adjust changes the current heading after being multipied by a constant. The look booleans are shortcuts to get the robot to face a certian direction. Based off of ideas in \href{https://www.chiefdelphi.com/t/experiments-with-a-swerve-steering-knob/446172}{\texttt{ https\+://www.\+chiefdelphi.\+com/t/experiments-\/with-\/a-\/swerve-\/steering-\/knob/446172}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em swerve} & The swerve drivebase subsystem. \\
+\hline
+{\em vX} & Double\+Supplier that supplies the x-\/translation joystick input. Should be in the range -\/1 to 1 with deadband already accounted for. Positive X is away from the alliance wall. \\
+\hline
+{\em vY} & Double\+Supplier that supplies the y-\/translation joystick input. Should be in the range -\/1 to 1 with deadband already accounted for. Positive Y is towards the left wall when looking through the driver station glass. \\
+\hline
+{\em heading\+Adjust} & Double\+Supplier that supplies the component of the robot\textquotesingle{}s heading angle that should be adjusted. Should range from -\/1 to 1 with deadband already accounted for. \\
+\hline
+{\em look\+Away} & Face the robot towards the opposing alliance\textquotesingle{}s wall in the same direction the driver is facing \\
+\hline
+{\em look\+Towards} & Face the robot towards the driver \\
+\hline
+{\em look\+Left} & Face the robot left \\
+\hline
+{\em look\+Right} & Face the robot right \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a9e6b57f4bd63a344312653e7874720e7}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a9e6b57f4bd63a344312653e7874720e7} 
+\index{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}!end@{end}}
+\index{end@{end}!frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv.\+end (\begin{DoxyParamCaption}\item[{boolean}]{interrupted }\end{DoxyParamCaption})}
+
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a72345897f5310a145f730eca5610bf5b}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a72345897f5310a145f730eca5610bf5b} 
+\index{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}!execute@{execute}}
+\index{execute@{execute}!frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv.\+execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a8c39f3fe0fb603fa6ac2fbb82e6c74de}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_a8c39f3fe0fb603fa6ac2fbb82e6c74de} 
+\index{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}!initialize@{initialize}}
+\index{initialize@{initialize}!frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv.\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_ab672a6ee286dff447b08d0a9ce84955b}\label{classfrc_1_1robot_1_1commands_1_1swervedrive_1_1drivebase_1_1AbsoluteDriveAdv_ab672a6ee286dff447b08d0a9ce84955b} 
+\index{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv@{frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily boolean frc.\+robot.\+commands.\+swervedrive.\+drivebase.\+Absolute\+Drive\+Adv.\+is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/steven/\+Git\+Hub/\+SCAROB/\+Swerve\+Drive-\/2024/src/main/java/frc/robot/commands/swervedrive/drivebase/\mbox{\hyperlink{AbsoluteDriveAdv_8java}{Absolute\+Drive\+Adv.\+java}}\end{DoxyCompactItemize}

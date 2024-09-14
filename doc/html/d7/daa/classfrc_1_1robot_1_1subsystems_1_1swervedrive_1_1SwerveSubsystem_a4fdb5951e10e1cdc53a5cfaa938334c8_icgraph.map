@@ -1,0 +1,9 @@
+<map id="frc.robot.subsystems.swervedrive.SwerveSubsystem.getHeading" name="frc.robot.subsystems.swervedrive.SwerveSubsystem.getHeading">
+<area shape="rect" id="Node000001" title="Gets the current yaw angle of the robot, as reported by the swerve pose estimator in the underlying d..." alt="" coords="308,69,555,109"/>
+<area shape="rect" id="Node000002" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a0a27c5621221d7f24f8bd66dc8e70866" title="Aim the robot at the speaker." alt="" coords="9,5,256,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,69,226,48,227,43,324,64"/>
+<area shape="rect" id="Node000003" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a00c75ce7fa468350ed3a2c88cbd46aaa" title="Get the chassis speeds based on controller input of 2 joysticks." alt="" coords="5,69,260,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,92,260,92,260,87,295,87"/>
+<area shape="rect" id="Node000004" href="$d7/daa/classfrc_1_1robot_1_1subsystems_1_1swervedrive_1_1SwerveSubsystem.html#a48df428fe4e6ce948b08d76631bbdbaf" title="Get the chassis speeds based on controller input of 1 joystick and one angle." alt="" coords="5,133,260,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="324,115,227,136,226,131,323,110"/>
+</map>
