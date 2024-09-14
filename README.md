@@ -11,3 +11,4 @@ Initial work based on Team 3481 code for YAGSL-Example.
 - Noah J. Shorey (Team Member)
 - Khang D. Tran (Team Member)
 - Zach R. Young (Team Member)
+- Jesus A. Lopez-Villarreal (Team Member)
