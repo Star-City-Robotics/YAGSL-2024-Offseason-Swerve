@@ -20,7 +20,7 @@
   },
   "encoder": {
     "type": "attached",
-    "id": null,
+    "id": 0,
     "canbus": null
   },
   "absoluteEncoderInverted": false
