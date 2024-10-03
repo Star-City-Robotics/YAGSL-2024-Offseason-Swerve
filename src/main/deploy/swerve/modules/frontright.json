@@ -11,7 +11,7 @@
   },
   "inverted": {
     "drive": true,
-    "angle": true
+    "angle": false
   },
   "angle": {
     "type": "sparkmax",
@@ -23,5 +23,5 @@
     "id": 0,
     "canbus": null
   },
-  "absoluteEncoderInverted": false
+  "absoluteEncoderInverted": true
 }
