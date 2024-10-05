@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import swervelib.parser.SwerveParser;
 import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.net.PortForwarder;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to each mode, as
@@ -55,6 +56,12 @@ public class Robot extends TimedRobot
     
     // Initiate camera
     CameraServer.startAutomaticCapture();
+
+    // Forward ports for camera
+    // To set another camera, add "+10" to port parameter in PortForwarder
+    for (int port = 5800; port <= 5809; port++) {
+      PortForwarder.add(port, "limelight.local", port);
+    }
   }
 
   /**
