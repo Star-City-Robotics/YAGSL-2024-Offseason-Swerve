@@ -8,11 +8,11 @@ import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.controls.DutyCycleOut;
 import com.ctre.phoenix6.hardware.TalonFX;
 
-import dev.doglog.DogLog;
+//import dev.doglog.DogLog;
 import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.lib.util.TunableOption;
+//import frc.lib.util.TunableOption;
 import frc.robot.Constants;
 
 public class IndexSubsystem extends SubsystemBase {
@@ -22,8 +22,8 @@ public class IndexSubsystem extends SubsystemBase {
   private final DigitalInput leftIndexSensor;
   private final DigitalInput rightIndexSensor;
   private boolean haveNote = false;
-  private static final TunableOption optLeftIndexSensorEnabled = new TunableOption("indexer/Left index sensor enabled", false);
-  private static final TunableOption optRightIndexSensorEnabled = new TunableOption("indexer/Right index sensor enabled", true);
+  //private static final TunableOption optLeftIndexSensorEnabled = new TunableOption("indexer/Left index sensor enabled", false);
+  //private static final TunableOption optRightIndexSensorEnabled = new TunableOption("indexer/Right index sensor enabled", true);
 
   public IndexSubsystem() {
     assert(instance == null);
@@ -41,10 +41,14 @@ public class IndexSubsystem extends SubsystemBase {
     return instance;
   }
 
-  public boolean haveNote() {
-    return (optLeftIndexSensorEnabled.get() && !leftIndexSensor.get()) ||
-      (optRightIndexSensorEnabled.get() && !rightIndexSensor.get());
-  }
+ // public boolean haveNote() {
+   // return (optLeftIndexSensorEnabled.get() && !leftIndexSensor.get()) ||
+     // (optRightIndexSensorEnabled.get() && !rightIndexSensor.get());
+ // }
+
+ public boolean haveNote() {
+  return haveNote;
+ }
 
   public void applyConfigs() {
     /* Configure the Index Motor */
@@ -82,9 +86,9 @@ public class IndexSubsystem extends SubsystemBase {
 
   @Override
   public void periodic() {
-    boolean currentVal = haveNote();
-
-      haveNote = currentVal;
+    boolean currentVal = true;
+    System.out.println("Oh no Jarvis");
+    haveNote = currentVal;
     }
 
 }

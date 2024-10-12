@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import frc.robot.subsystems.IndexSubsystem;
 import frc.robot.subsystems.IntakeSubsystem;
 
-public class IntakeCommand extends Command {
+public class IntakeCommand extends Command implements Runnable {
   private final IntakeSubsystem intake;
   private final IndexSubsystem index;
   private final GenericHID controller;
@@ -24,6 +24,17 @@ public class IntakeCommand extends Command {
     this.controller = controller;
   }
 
+  // Called when the command is initially scheduled.
+  @Override
+  public void initialize() {
+    intake.intake();
+    index.index();
+    
+  }
+
+  public void run(){
+
+  }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
@@ -34,6 +45,7 @@ public class IntakeCommand extends Command {
   public void end(boolean interrupted) {
     intake.stop();
     index.stop();
+
 
     if (!interrupted) {
       CommandScheduler.getInstance().schedule(
