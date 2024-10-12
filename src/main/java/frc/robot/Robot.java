@@ -7,13 +7,25 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import edu.wpi.first.wpilibj2.command.button.Trigger;
+import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 import java.io.File;
 import java.io.IOException;
+import java.util.function.Consumer;
+
 import swervelib.parser.SwerveParser;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.net.PortForwarder;
+import edu.wpi.first.units.Measure;
+import edu.wpi.first.units.Voltage;
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
+import edu.wpi.first.wpilibj.sysid.SysIdRoutineLog;
+import edu.wpi.first.util.sendable.SendableRegistry;
+import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to each mode, as
@@ -29,10 +41,18 @@ public class Robot extends TimedRobot
   private RobotContainer m_robotContainer;
 
   private Timer disabledTimer;
+  private final PWMSparkMax m_leftDrive = new PWMSparkMax(0);
+  private final PWMSparkMax m_rightDrive = new PWMSparkMax(1);
+  private final DifferentialDrive m_robotDrive = 
+      new DifferentialDrive(m_leftDrive::set, m_rightDrive::set);
+  private final XboxController m_controller = new XboxController(0);
+  private final Timer m_timer = new Timer();
 
   public Robot()
   {
     instance = this;
+    SendableRegistry.addChild(m_robotDrive, m_leftDrive);
+    SendableRegistry.addChild(m_robotDrive, m_rightDrive);
   }
 
   public static Robot getInstance()
@@ -108,6 +128,7 @@ public class Robot extends TimedRobot
   @Override
   public void autonomousInit()
   {
+    m_timer.restart();
     m_robotContainer.setMotorBrake(true);
     m_autonomousCommand = m_robotContainer.getAutonomousCommand();
 
@@ -124,6 +145,13 @@ public class Robot extends TimedRobot
   @Override
   public void autonomousPeriodic()
   {
+    if (m_timer.get() < 3.0) {
+      // Drive forwards half speed, make sure to turn input squaring off
+      m_robotDrive.arcadeDrive(-0.5, 0.0, false);
+    } 
+    else {
+      m_robotDrive.stopMotor(); // stop robot
+    } 
   }
 
   @Override
