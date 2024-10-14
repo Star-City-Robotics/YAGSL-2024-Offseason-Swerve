@@ -4,10 +4,13 @@
 
 package frc.robot;
 
+import com.ctre.phoenix6.signals.InvertedValue;
+import com.ctre.phoenix6.signals.NeutralModeValue;
 import com.pathplanner.lib.util.PIDConstants;
 
 import edu.wpi.first.math.geometry.Translation3d;
 import edu.wpi.first.math.util.Units;
+import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import swervelib.math.Matter;
 
 /**
@@ -50,4 +53,42 @@ public final class Constants
     public static final double RIGHT_X_DEADBAND = 0.1;
     public static final double TURN_CONSTANT    = 6;
   }
+
+  public class Intake {
+        /* IDs */
+        public static final int intakeMotorID = 3;
+        /* CANBus */
+        public static final String intakeMotorCanBus = "rio";
+        /* Motor Speed Values */
+        public static final double intakingSpeed = 0.50;
+        public static final double ejectingSpeed = -0.50;
+        public static final double stoppingSpeed = 0.00;
+        /* Motor Config Values */
+        public static final double peakForwardVoltage = 12.0;
+        public static final double peakReverseVoltage = -12.0;
+        public static final InvertedValue motorOutputInverted = InvertedValue.Clockwise_Positive;
+        public static final NeutralModeValue motorNeutralValue = NeutralModeValue.Brake;
+    }  
+
+    public class Index {
+      /* IDs */
+      public static final int indexMotorID = 13;
+      public static final int leftIndexSensorID = 0;
+      public static final int rightIndexSensorID = 1;
+      /* CANBus */
+      public static final String indexMotorCanBus = "rio";
+      /* Motor Speed Values */
+      public static final double indexSpeed = 0.80;
+      public static final double feedSpeed = 1.00;
+      public static final double softFeedSpeed = 0.25;
+      public static final double ejectSpeed = -1.00;
+      public static final double stopSpeed = 0.00;
+      /* Timer Values */
+      public static final double waitToShootTime = 0.75;
+      /* Motor Config Values */
+      public static final double peakForwardVoltage = 12.0;
+      public static final double peakReverseVoltage = -12.0;
+      public static final InvertedValue motorOutputInverted = InvertedValue.Clockwise_Positive;
+      public static final NeutralModeValue motorNeutralValue = NeutralModeValue.Brake;
+    }
 }
