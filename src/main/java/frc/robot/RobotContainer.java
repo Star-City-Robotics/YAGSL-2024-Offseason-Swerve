@@ -18,9 +18,9 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.Intake;
 import frc.robot.Constants.OperatorConstants;
-import frc.robot.commands.IntakeCommand;
+
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
-import frc.robot.subsystems.IndexSubsystem;
+
 import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
@@ -45,11 +45,9 @@ public class RobotContainer
 
 
   private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
-  private final IndexSubsystem index = new IndexSubsystem();
   private final GenericHID controller = new GenericHID(0);
   // Todo: GET A PORT NUMBER
   //private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, index, controller);
-  private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, index, controller);
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -121,9 +119,7 @@ public class RobotContainer
 
     driverXbox.a().onTrue((Commands.runOnce(drivebase::zeroGyro)));
     driverXbox.x().onTrue(Commands.runOnce(drivebase::addFakeVisionReading));
-    driverXbox.rightTrigger().onTrue(Commands.runOnce(intakeCommand, intakeSubsystem ));
-    //driverXbox.rightTrigger().onTrue(intakeCommand);
-    //driverXbox.rightTrigger().onTrue(Commands.runOnce(null, intakeSubsystem));
+    
     
     
     //Commands.runOnce(drivebase::getPitch)
@@ -133,6 +129,10 @@ public class RobotContainer
                               ));
     driverXbox.y().whileTrue(drivebase.aimAtSpeaker(2));
     // driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
+
+
+
+
   }
 
   /**
