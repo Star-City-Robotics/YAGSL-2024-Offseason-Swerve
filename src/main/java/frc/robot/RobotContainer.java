@@ -10,17 +10,23 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.RobotBase;
+import edu.wpi.first.wpilibj.motorcontrol.Spark;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
+import edu.wpi.first.wpilibj2.command.ConditionalCommand;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.Intake;
 import frc.robot.Constants.OperatorConstants;
-
+import java.util.Set;
+import java.util.List;
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
+import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
+
+import com.pathplanner.lib.auto.NamedCommands;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a "declarative" paradigm, very
@@ -35,6 +41,14 @@ public class RobotContainer
   // The robot's subsystems and commands are defined here...
   private final SwerveSubsystem drivebase = new SwerveSubsystem(new File(Filesystem.getDeployDirectory(),
                                                                          "swerve"));
+
+
+                                                                         
+  private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
+ 
+  
+
+
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -114,6 +128,11 @@ public class RobotContainer
                               ));
     driverXbox.y().whileTrue(drivebase.aimAtSpeaker(2));
     // driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
+
+    //driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::power));
+
+    driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::ppower));
+    driverXbox.leftTrigger().whileTrue(Commands.runOnce(intakeSubsystem::power));
   }
 
   /**
