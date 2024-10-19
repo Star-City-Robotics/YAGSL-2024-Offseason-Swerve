@@ -19,8 +19,8 @@ public class IntakeSubsystem extends SubsystemBase{
         return run(() -> intakeMotor.set(1));
     }
     
-    public Command stop() {
-        return run(() -> intakeMotor.set(0));
+    public void stop() {
+        intakeMotor.set(0);
         
     }
 
