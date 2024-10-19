@@ -134,6 +134,7 @@ public class RobotContainer
 
     driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::ppower));
     driverXbox.leftTrigger().whileTrue(Commands.runOnce(intakeSubsystem::power));
+    driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stop));
   }
 
   /**
