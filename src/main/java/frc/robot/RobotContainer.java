@@ -145,7 +145,7 @@ public class RobotContainer
   public Command getAutonomousCommand()
   {
     // An example command will be run in autonomous
-    return new PathPlannerAuto("B.O Auto");
+    return new PathPlannerAuto("test auto");
   }
 
   public void setDriveMode()
