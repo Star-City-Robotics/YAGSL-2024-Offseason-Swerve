@@ -27,6 +27,7 @@ import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
 
 import com.pathplanner.lib.auto.NamedCommands;
+import com.pathplanner.lib.commands.PathPlannerAuto;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a "declarative" paradigm, very
@@ -143,7 +144,7 @@ public class RobotContainer
   public Command getAutonomousCommand()
   {
     // An example command will be run in autonomous
-    return drivebase.getAutonomousCommand("donee is the goat");
+    return new PathPlannerAuto("B.O Auto");
   }
 
   public void setDriveMode()

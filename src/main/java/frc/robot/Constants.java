@@ -60,7 +60,7 @@ public final class Constants
   public class Intake {
         /* IDs */
         public static final int intakeMotorID = 9;
-        public static final int intakeSensorID = 8;
+        //public static final int intakeSensorID = 8;
         
         /* CANBus */
         public static final String intakeMotorCanBus = "rio";
