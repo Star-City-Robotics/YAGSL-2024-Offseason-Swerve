@@ -11,6 +11,7 @@ import au.grapplerobotics.ConfigurationFailedException;
 public class IntakeSubsystem extends SubsystemBase{
 
     private CANSparkMax intakeMotor = new CANSparkMax(Constants.Intake.intakeMotorID, MotorType.kBrushless);
+    private LaserCan intakeSensor = new LaserCan(Constants.Intake.intakeSensorID);
 
     public IntakeSubsystem() {
 
@@ -24,9 +25,11 @@ public class IntakeSubsystem extends SubsystemBase{
         intakeMotor.set(0); 
     }
 
-    public void ejectLoader () {
+    public void ejectLoader() {
         intakeMotor.set(-1);
     }
     
-    
+    public void sensor() {
+        LaserCan.Measurement measurement = intakeSensor.getMeasurement();
+    }
 }
