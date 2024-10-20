@@ -4,8 +4,12 @@ import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.IntakeSubsystem;
 
 public class IntakeCommand extends Command{
-    
-    IntakeSubsystem intake;
+    private final IntakeSubsystem intake;
+
+    public IntakeCommand(IntakeSubsystem subsystem) {
+        intake = subsystem;
+        addRequirements(intake);
+    }
 
     @Override
     public void initialize() {

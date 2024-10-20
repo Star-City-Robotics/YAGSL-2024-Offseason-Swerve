@@ -113,7 +113,7 @@ public class RobotContainer
 
     drivebase.setDefaultCommand(
         !RobotBase.isSimulation() ? driveFieldOrientedAnglularVelocity : driveFieldOrientedAnglularVelocitySim);
-        
+
   }
 
   /**
@@ -142,7 +142,7 @@ public class RobotContainer
 
     driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::powerIntake)).onFalse(Commands.runOnce(intakeSubsystem::stopIntake));
     driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stopIntake));
-    driverXbox.leftTrigger().whileTrue(new IntakeCommand());
+    driverXbox.leftTrigger().whileTrue(new IntakeCommand(intakeSubsystem));
   }
 
   /**
