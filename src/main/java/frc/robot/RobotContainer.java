@@ -48,7 +48,7 @@ public class RobotContainer
 
                                                                          
   private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
- 
+  private final IntakeCommand intakeCommand = new IntakeCommand();
   
 
 
@@ -142,7 +142,8 @@ public class RobotContainer
 
     driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::powerIntake)).onFalse(Commands.runOnce(intakeSubsystem::stopIntake));
     driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stopIntake));
-    driverXbox.leftTrigger().whileTrue(new IntakeCommand(intakeSubsystem));
+    driverXbox.leftTrigger().whileTrue(intakeCommand);
+    
   }
 
   /**
