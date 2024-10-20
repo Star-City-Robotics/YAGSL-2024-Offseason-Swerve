@@ -60,7 +60,7 @@ public class RobotContainer
   {
     // Configure the trigger bindings
     configureBindings();
-
+    NamedCommands.registerCommand("Spin Intake", new IntakeCommand(intakeSubsystem));
     // Applies deadbands and inverts controls because joysticks
     // are back-right positive while robot
     // controls are front-left positive
