@@ -22,9 +22,12 @@ import frc.robot.Constants.OperatorConstants;
 import java.util.Set;
 import java.util.List;
 
+import frc.robot.commands.EjectCommand;
 import frc.robot.commands.IntakeCommand;
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
 import frc.robot.subsystems.IntakeSubsystem;
+import frc.robot.subsystems.LoaderSubsystem;
+import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
 
@@ -48,8 +51,11 @@ public class RobotContainer
 
                                                                          
   private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
-  private final IntakeCommand intakeCommand= new IntakeCommand(intakeSubsystem);
-  
+  private final LoaderSubsystem loaderSubsystem = new LoaderSubsystem();
+  private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
+
+  private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, loaderSubsystem);
+  private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
 
 
 
@@ -60,7 +66,7 @@ public class RobotContainer
   {
     // Configure the trigger bindings
     configureBindings();
-    NamedCommands.registerCommand("Spin Intake", new IntakeCommand(intakeSubsystem));
+    NamedCommands.registerCommand("Spin Intake", new IntakeCommand(intakeSubsystem, loaderSubsystem));
     // Applies deadbands and inverts controls because joysticks
     // are back-right positive while robot
     // controls are front-left positive
@@ -136,14 +142,13 @@ public class RobotContainer
                                    new Pose2d(new Translation2d(4, 4), Rotation2d.fromDegrees(0)))
                               ));
     driverXbox.y().whileTrue(drivebase.aimAtSpeaker(2));
-    // driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
+    driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
 
-    //driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::power));
 
     driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::powerIntake)).onFalse(Commands.runOnce(intakeSubsystem::stopIntake));
     driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stopIntake));
     driverXbox.leftTrigger().whileTrue(intakeCommand);
-    
+    driverXbox.leftBumper().whileTrue(ejectCommand);
   }
 
   /**
