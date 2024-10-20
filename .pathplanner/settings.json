@@ -3,11 +3,11 @@
   "robotLength": 0.69,
   "holonomicMode": true,
   "pathFolders": [
-    ".pathplanner"
+    "yeet"
   ],
   "autoFolders": [],
-  "defaultMaxVel": 3.0,
-  "defaultMaxAccel": 3.0,
+  "defaultMaxVel": 4.5,
+  "defaultMaxAccel": 4.5,
   "defaultMaxAngVel": 540.0,
   "defaultMaxAngAccel": 720.0,
   "maxModuleSpeed": 6.03504
