@@ -4,6 +4,10 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
+
+import au.grapplerobotics.LaserCan;
+import au.grapplerobotics.ConfigurationFailedException;
+
 public class IntakeSubsystem extends SubsystemBase{
 
     private CANSparkMax intakeMotor = new CANSparkMax(Constants.Intake.intakeMotorID, MotorType.kBrushless);
