@@ -48,7 +48,7 @@ public class RobotContainer
 
                                                                          
   private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
-  private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem);
+  private final IntakeCommand intakeCommand= new IntakeCommand(intakeSubsystem);
   
 
 
