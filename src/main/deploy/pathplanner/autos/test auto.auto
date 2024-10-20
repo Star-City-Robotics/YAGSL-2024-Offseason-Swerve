@@ -16,6 +16,12 @@
           "data": {
             "pathName": "test"
           }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Spin Intake"
+          }
         }
       ]
     }
