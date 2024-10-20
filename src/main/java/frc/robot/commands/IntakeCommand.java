@@ -19,6 +19,7 @@ public class IntakeCommand extends Command{
     @Override
     public void initialize() {
         intake.powerIntake();
+        loader.powerLoader();
     }
 
     @Override
@@ -29,6 +30,7 @@ public class IntakeCommand extends Command{
     @Override
     public void end(boolean interrupted) {
         intake.stopIntake();
+        loader.stopLoader();
     }
 
 }
