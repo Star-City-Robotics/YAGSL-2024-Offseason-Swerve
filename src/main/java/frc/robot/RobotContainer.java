@@ -24,6 +24,7 @@ import java.util.List;
 
 import frc.robot.commands.EjectCommand;
 import frc.robot.commands.IntakeCommand;
+import frc.robot.commands.ShooterCommand;
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
 import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.LoaderSubsystem;
@@ -55,7 +56,9 @@ public class RobotContainer
   private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
 
   private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, loaderSubsystem);
+  private final ShooterCommand shooterCommand = new ShooterCommand(shooterSubsystem, loaderSubsystem);
   private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
+  
 
 
 
@@ -145,9 +148,8 @@ public class RobotContainer
     driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
 
 
-    driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::powerIntake)).onFalse(Commands.runOnce(intakeSubsystem::stopIntake));
-    driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stopIntake));
-    driverXbox.leftTrigger().whileTrue(intakeCommand);
+    driverXbox.rightTrigger().whileTrue(intakeCommand);
+    driverXbox.leftTrigger().whileTrue(shooterCommand);
     driverXbox.leftBumper().whileTrue(ejectCommand);
   }
 
