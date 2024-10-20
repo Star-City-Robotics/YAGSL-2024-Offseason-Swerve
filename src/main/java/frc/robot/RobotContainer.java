@@ -21,6 +21,8 @@ import frc.robot.Constants.Intake;
 import frc.robot.Constants.OperatorConstants;
 import java.util.Set;
 import java.util.List;
+
+import frc.robot.commands.IntakeCommand;
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
 import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
@@ -134,6 +136,7 @@ public class RobotContainer
 
     driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::powerIntake));
     driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stopIntake));
+    driverXbox.leftTrigger().whileTrue(new IntakeCommand());
   }
 
   /**
