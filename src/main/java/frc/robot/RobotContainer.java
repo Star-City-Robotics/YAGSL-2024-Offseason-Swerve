@@ -47,7 +47,7 @@ import com.pathplanner.lib.commands.PathPlannerAuto;
  */
 public class RobotContainer
 {
-
+  private final SendableChooser<Command> autoChooser;
   // Replace with CommandPS4Controller or CommandJoystick if needed
   final CommandXboxController driverXbox = new CommandXboxController(0);
   // The robot's subsystems and commands are defined here...
