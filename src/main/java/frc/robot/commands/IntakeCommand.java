@@ -20,7 +20,7 @@ public class IntakeCommand extends Command{
     @Override
     public void initialize() {
         intake.powerIntake();
-        new WaitCommand(2);
+        WaitCommand wait = new WaitCommand(2);
         loader.powerLoader();
     }
 
