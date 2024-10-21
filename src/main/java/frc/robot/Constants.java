@@ -71,4 +71,9 @@ public final class Constants
     public static final int loaderMotorID = 5;
   }
 
+  public class Pivot {
+    public static final int pivotMotorLeftID = 4;
+    public static final int pivotMotorRightID = 3;
+  }
+
 }
