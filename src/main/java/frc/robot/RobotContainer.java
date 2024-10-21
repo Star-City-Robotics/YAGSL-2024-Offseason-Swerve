@@ -17,21 +17,18 @@ import edu.wpi.first.wpilibj2.command.ConditionalCommand;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import frc.robot.Constants.Intake;
 import frc.robot.Constants.OperatorConstants;
 import java.util.Set;
 import java.util.List;
 
-import frc.robot.commands.EjectCommand;
 import frc.robot.commands.IntakeCommand;
-import frc.robot.commands.ShooterCommand;
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
 import frc.robot.subsystems.IntakeSubsystem;
-import frc.robot.subsystems.LoaderSubsystem;
-import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
-
+import com.pathplanner.lib.auto.AutoBuilder;
 import com.pathplanner.lib.auto.NamedCommands;
 import com.pathplanner.lib.commands.PathPlannerAuto;
 
@@ -52,13 +49,8 @@ public class RobotContainer
 
                                                                          
   private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
-  private final LoaderSubsystem loaderSubsystem = new LoaderSubsystem();
-  private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
-
   private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, loaderSubsystem);
-  private final ShooterCommand shooterCommand = new ShooterCommand(shooterSubsystem, loaderSubsystem);
-  private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
-  
+  private final SendableChooser<Command> autoChooser;
 
 
 
@@ -69,7 +61,7 @@ public class RobotContainer
   {
     // Configure the trigger bindings
     configureBindings();
-    NamedCommands.registerCommand("Spin Intake", new IntakeCommand(intakeSubsystem, loaderSubsystem));
+    NamedCommands.registerCommand("Spin Intake", new IntakeCommand(intakeSubsystem));
     // Applies deadbands and inverts controls because joysticks
     // are back-right positive while robot
     // controls are front-left positive
@@ -145,26 +137,26 @@ public class RobotContainer
                                    new Pose2d(new Translation2d(4, 4), Rotation2d.fromDegrees(0)))
                               ));
     driverXbox.y().whileTrue(drivebase.aimAtSpeaker(2));
-    driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
+    // driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
 
+    //driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::power));
 
-    driverXbox.rightTrigger().whileTrue(intakeCommand);
-    driverXbox.leftTrigger().whileTrue(shooterCommand);
-    driverXbox.leftBumper().whileTrue(ejectCommand);
+    driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::powerIntake)).onFalse(Commands.runOnce(intakeSubsystem::stopIntake));
+    driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stopIntake));
+    driverXbox.leftTrigger().whileTrue(intakeCommand);
     
-    driverXbox.rightBumper().whileTrue(Commands.runOnce(loaderSubsystem::powerLoader)).onFalse(Commands.runOnce(loaderSubsystem::stopLoader));
   }
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *
    * @return the command to run in autonomous
-   */ 
-  public Command getAutonomousCommand()
-  {
-    // An example command will be run in autonomous
-    return new PathPlannerAuto("test auto");
-  }
+   */
+
+ 
+  public Command getAutonomousCommand() {
+    return autoChooser.getSelected();
+}
 
   public void setDriveMode()
   {
