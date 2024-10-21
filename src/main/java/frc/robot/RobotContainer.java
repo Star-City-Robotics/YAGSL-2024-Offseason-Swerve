@@ -52,6 +52,9 @@ public class RobotContainer
 
                                                                          
   private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
+  private final LoaderSubsystem loaderSubsystem = new LoaderSubsystem();
+  private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
+
   private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, loaderSubsystem);
   private final ShooterCommand shooterCommand = new ShooterCommand(shooterSubsystem, loaderSubsystem);
   private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
