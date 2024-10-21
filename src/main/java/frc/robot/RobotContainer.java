@@ -65,7 +65,7 @@ public class RobotContainer
   private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
   
 //trying to fix zach's goofy ahh errors
-private final SendableChooser<Command> autoChooser;
+
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -152,14 +152,14 @@ private final SendableChooser<Command> autoChooser;
                                    new Pose2d(new Translation2d(4, 4), Rotation2d.fromDegrees(0)))
                               ));
     driverXbox.y().whileTrue(drivebase.aimAtSpeaker(2));
-    // driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
+    driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
 
-    //driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::power));
 
-    driverXbox.rightTrigger().whileTrue(Commands.runOnce(intakeSubsystem::powerIntake)).onFalse(Commands.runOnce(intakeSubsystem::stopIntake));
-    driverXbox.rightBumper().whileTrue(Commands.runOnce(intakeSubsystem::stopIntake));
-    driverXbox.leftTrigger().whileTrue(intakeCommand);
+    driverXbox.rightTrigger().whileTrue(intakeCommand);
+    driverXbox.leftTrigger().whileTrue(shooterCommand);
+    driverXbox.leftBumper().whileTrue(ejectCommand);
     
+    driverXbox.rightBumper().whileTrue(Commands.runOnce(loaderSubsystem::powerLoader)).onFalse(Commands.runOnce(loaderSubsystem::stopLoader));
   }
 
   /**
