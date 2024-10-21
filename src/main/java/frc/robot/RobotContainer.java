@@ -26,6 +26,8 @@ import java.util.List;
 import frc.robot.commands.IntakeCommand;
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
 import frc.robot.subsystems.IntakeSubsystem;
+import frc.robot.subsystems.LoaderSubsystem;
+import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
 import com.pathplanner.lib.auto.AutoBuilder;
@@ -49,6 +51,9 @@ public class RobotContainer
 
                                                                          
   private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
+  private final LoaderSubsystem loaderSubsystem = new LoaderSubsystem();
+  private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
+  
   private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, loaderSubsystem);
   private final ShooterCommand shooterCommand = new ShooterCommand(shooterSubsystem, loaderSubsystem);
   private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
