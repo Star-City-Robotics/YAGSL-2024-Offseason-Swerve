@@ -10,7 +10,7 @@ import frc.robot.Constants;
 public class PivotSubsystem extends SubsystemBase{
     
     private CANSparkMax pivotMotorLeft = new CANSparkMax(Constants.Pivot.pivotMotorLeftID, MotorType.kBrushless);
-    private CANSparkMax pivotMotorRight = new CANSparkMax(Constants.Pivot.pivotMotorLeftID, MotorType.kBrushless);
+    private CANSparkMax pivotMotorRight = new CANSparkMax(Constants.Pivot.pivotMotorRightID, MotorType.kBrushless);
 
     public PivotSubsystem() {
 
