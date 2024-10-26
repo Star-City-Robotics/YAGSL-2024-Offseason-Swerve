@@ -1,0 +1,55 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 0.4,
+      "y": 7.0
+    },
+    "rotation": 180.0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "3ntoppath"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "3ntoppath-part2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "3ntoppath-part3"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "3ntoppath-part4"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "3ntop-part5"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "3ntop-part6"
+          }
+        }
+      ]
+    }
+  },
+  "folder": "3nauto",
+  "choreoAuto": false
+}

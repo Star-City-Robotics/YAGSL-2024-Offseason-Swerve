@@ -1,0 +1,31 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 0.4,
+      "y": 7.0
+    },
+    "rotation": 180.0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "1ntoppath"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "1ntoppath-part2"
+          }
+        }
+      ]
+    }
+  },
+  "folder": "1nauto",
+  "choreoAuto": false
+}
