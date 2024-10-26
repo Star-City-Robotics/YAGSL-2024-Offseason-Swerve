@@ -20,21 +20,21 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.Constants.Intake;
-import frc.robot.Constants.Loader;
-import frc.robot.Constants.Shooter;
+//import frc.robot.Constants.Intake;
+//import frc.robot.Constants.Loader;
+//import frc.robot.Constants.Shooter;
 import frc.robot.Constants.OperatorConstants;
 import java.util.Set;
 import java.util.List;
 
-import frc.robot.commands.IntakeCommand;
-import frc.robot.commands.ShooterCommand;
-import frc.robot.commands.EjectCommand;
+//import frc.robot.commands.IntakeCommand;
+//import frc.robot.commands.ShooterCommand;
+//import frc.robot.commands.EjectCommand;
 import frc.robot.commands.swervedrive.drivebase.AbsoluteDriveAdv;
-import frc.robot.subsystems.IntakeSubsystem;
-import frc.robot.subsystems.LoaderSubsystem;
-import frc.robot.subsystems.PivotSubsystem;
-import frc.robot.subsystems.ShooterSubsystem;
+//mport frc.robot.subsystems.IntakeSubsystem;
+//import frc.robot.subsystems.LoaderSubsystem;
+//import frc.robot.subsystems.PivotSubsystem;
+//import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.io.File;
 import com.pathplanner.lib.auto.AutoBuilder;
@@ -57,14 +57,14 @@ public class RobotContainer
 
 
                                                                          
-  private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
-  private final LoaderSubsystem loaderSubsystem = new LoaderSubsystem();
-  private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
-  private final PivotSubsystem pivotSubsystem = new PivotSubsystem();
+  //private final IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
+  //private final LoaderSubsystem loaderSubsystem = new LoaderSubsystem();
+  //private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
+  //private final PivotSubsystem pivotSubsystem = new PivotSubsystem();
 
-  private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, loaderSubsystem);
-  private final ShooterCommand shooterCommand = new ShooterCommand(shooterSubsystem, loaderSubsystem);
-  private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
+  //private final IntakeCommand intakeCommand = new IntakeCommand(intakeSubsystem, loaderSubsystem);
+  //private final ShooterCommand shooterCommand = new ShooterCommand(shooterSubsystem, loaderSubsystem);
+  //private final EjectCommand ejectCommand = new EjectCommand(intakeSubsystem, shooterSubsystem, loaderSubsystem);
   
 //trying to fix zach's goofy ahh errors
 
@@ -76,7 +76,7 @@ public class RobotContainer
   {
     // Configure the trigger bindings
     configureBindings();
-    NamedCommands.registerCommand("Spin Intake", new IntakeCommand(intakeSubsystem, loaderSubsystem));
+    //NamedCommands.registerCommand("Spin Intake", new IntakeCommand(intakeSubsystem, loaderSubsystem));
     autoChooser = AutoBuilder.buildAutoChooser();
     SmartDashboard.putData("Auto Chooser", autoChooser);
     // Applies deadbands and inverts controls because joysticks
@@ -157,12 +157,12 @@ public class RobotContainer
     driverXbox.x().whileTrue(Commands.runOnce(drivebase::lock, drivebase).repeatedly());
 
 
-    driverXbox.rightTrigger().whileTrue(intakeCommand);
+    //driverXbox.rightTrigger().whileTrue(intakeCommand);
     //driverXbox.leftTrigger().whileTrue(shooterCommand);
     //driverXbox.leftBumper().whileTrue(ejectCommand);
     
-    driverXbox.leftTrigger().whileTrue(Commands.runOnce(pivotSubsystem::upPivot)).onFalse(Commands.runOnce(pivotSubsystem::stopPivot));
-    driverXbox.leftBumper().whileTrue(Commands.runOnce(pivotSubsystem::downPivot)).onFalse(Commands.runOnce(pivotSubsystem::stopPivot));
+    //driverXbox.leftTrigger().whileTrue(Commands.runOnce(pivotSubsystem::upPivot)).onFalse(Commands.runOnce(pivotSubsystem::stopPivot));
+    //driverXbox.leftBumper().whileTrue(Commands.runOnce(pivotSubsystem::downPivot)).onFalse(Commands.runOnce(pivotSubsystem::stopPivot));
   }
 
   /**

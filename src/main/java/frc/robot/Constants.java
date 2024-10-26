@@ -53,27 +53,4 @@ public final class Constants
     public static final double RIGHT_X_DEADBAND = 0.1;
     public static final double TURN_CONSTANT    = 6;
   }
-
-  public class Intake {
-       
-    public static final int intakeMotorID = 9;
-    public static final int intakeSensorID = 8;
-      
-    //public static final String intakeMotorCanBus = "rio";
-    }  
-
-  public class Shooter {
-    public static final int shooterMotorTopID = 7;
-    public static final int shooterMotorBottomID = 6;
-  }
-
-  public class Loader {
-    public static final int loaderMotorID = 5;
-  }
-
-  public class Pivot {
-    public static final int pivotMotorLeftID = 4;
-    public static final int pivotMotorRightID = 3;
-  }
-
 }
