@@ -2,10 +2,10 @@
   "version": 1.0,
   "startingPose": {
     "position": {
-      "x": 2.0,
-      "y": 7.0
+      "x": 0.4,
+      "y": 4.2
     },
-    "rotation": 0
+    "rotation": 180.0
   },
   "command": {
     "type": "sequential",
@@ -14,12 +14,18 @@
         {
           "type": "path",
           "data": {
-            "pathName": "New Path"
+            "pathName": "1nbottom"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "1nbottompath-part2"
           }
         }
       ]
     }
   },
-  "folder": null,
+  "folder": "1nauto",
   "choreoAuto": false
 }
