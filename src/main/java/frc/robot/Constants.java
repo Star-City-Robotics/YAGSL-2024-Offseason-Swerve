@@ -58,8 +58,6 @@ public final class Constants
        
     public static final int intakeMotorID = 9;
     public static final int intakeSensorID = 8;
-      
-    //public static final String intakeMotorCanBus = "rio";
     }  
 
   public class Shooter {

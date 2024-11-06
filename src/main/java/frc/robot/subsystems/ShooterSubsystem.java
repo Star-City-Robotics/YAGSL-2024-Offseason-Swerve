@@ -29,4 +29,9 @@ public class ShooterSubsystem extends SubsystemBase {
         shooterMotorTop.set(-1);
         shooterMotorBottom.set(-1);
     }
+
+    public void shooterAMP() {
+        shooterMotorTop.set(0.2);
+        shooterMotorBottom.set(0.1);
+    }
 }

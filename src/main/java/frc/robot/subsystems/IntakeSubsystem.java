@@ -30,6 +30,6 @@ public class IntakeSubsystem extends SubsystemBase{
     }
     
     public void sensor() {
-        LaserCan.Measurement measurement = intakeSensor.getMeasurement();
+        
     }
 }

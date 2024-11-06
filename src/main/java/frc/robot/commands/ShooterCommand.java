@@ -1,6 +1,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.subsystems.LoaderSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
@@ -10,6 +11,8 @@ public class ShooterCommand extends Command {
     private final ShooterSubsystem shooter;
     private final LoaderSubsystem loader;
 
+    private WaitCommand wait = new WaitCommand(2);
+    
     public ShooterCommand(ShooterSubsystem shooter, LoaderSubsystem loader) {
         this.shooter = shooter;
         this.loader = loader;
@@ -20,8 +23,8 @@ public class ShooterCommand extends Command {
     @Override
     public void initialize() {
         shooter.powerShooter();
-        new WaitCommand(0.5);
-        loader.powerLoader();
+        wait.andThen(Commands.runOnce(loader::powerLoader));
+ 
     }
 
     @Override
